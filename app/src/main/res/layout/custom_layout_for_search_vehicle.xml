@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:weightSum="3"
+    android:background="#C9E9FF"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:weightSum="6"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/truckImageId"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:src="@drawable/rsz_1rsz_1truck"
+
+            />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tripCostId"
+            android:text="Trip Cost"
+            android:textStyle="bold"
+            android:textColor="#EE3B5F"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:weightSum="4"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/vehicleNumberPlateId"
+            android:text="Number Plate"
+            android:layout_width="match_parent"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:gravity="center"
+            android:textStyle="bold"
+            android:id="@+id/vehicleCarryingCapacityId"
+            android:text="Capacity(CBM)"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:textStyle="bold"
+            android:gravity="center"
+            android:id="@+id/vehicleWeightCapacity"
+            android:text="Weight Capacity"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:textStyle="bold"
+            android:gravity="center"
+            android:id="@+id/vehicleTypeId"
+            android:text="Number Plate"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

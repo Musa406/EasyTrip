@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgsignin"
+    android:weightSum="9"
+    android:orientation="vertical"
+    tools:context=".UserHomeInterface">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/searchId"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bgcolor"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="74dp"
+
+                    android:layout_height="66dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circle_booked"
+                    android:padding="10dp"
+                    android:src="@drawable/search_icon" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/c1"
+
+                    ></View>
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20dp"
+                    android:text="Search Available"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textStyle="bold"
+
+                    />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <!--   second card view        -->
+        <android.support.v7.widget.CardView
+            android:id="@+id/creatTripId"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bgcolor"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="80dp"
+
+                    android:layout_height="74dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circle_helpline"
+                    android:padding="10dp"
+                    android:src="@drawable/helpline_icon" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/c2"
+
+                    ></View>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20dp"
+                    android:text="Create Trip"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textStyle="bold"
+
+                    />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+    <!--Second linear layout,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-->
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:gravity="center"
+        android:weightSum="2"
+        android:orientation="horizontal"
+
+        >
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/bookingId"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bgcolor"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="80dp"
+
+                    android:layout_height="75dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circle_color_for_search"
+                    android:padding="10dp"
+                    android:src="@drawable/booking_icon" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/c1"
+
+                    ></View>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20dp"
+                    android:text="My Bookings"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textStyle="bold"
+
+                    />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <!--   second card view        -->
+        <android.support.v7.widget.CardView
+            android:id="@+id/profileId"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bgcolor"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="80dp"
+
+                    android:layout_height="74dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circle_profile"
+                    android:padding="10dp"
+                    android:src="@drawable/profile_icon" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/c2"
+
+                    ></View>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20dp"
+                    android:text="Profile"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textStyle="bold"
+
+                    />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#ffffff"
+        android:gravity="bottom">
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+
+            app:menu="@menu/navigation"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

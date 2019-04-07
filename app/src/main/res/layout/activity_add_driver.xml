@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#b0c4be"
+    android:weightSum="10"
+    android:orientation="vertical"
+    tools:context=".UserHomeInterface">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:weightSum="2"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Driver Information"
+            android:textAlignment="center"
+            android:textColor="#0A0A0A"
+
+            android:textSize="30dp"
+            android:textStyle="normal" />
+
+        <EditText
+            android:id="@+id/driverNameId"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/signupinputstyle"
+            android:hint="Name"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="#000"
+            android:textColorHint="@color/c2"
+            android:textIsSelectable="true"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/driverMobileId"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/signupinputstyle"
+            android:hint="Mobile number"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="#000"
+            android:textColorHint="@color/c2"
+            android:textIsSelectable="true"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/driverEmailId"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/signupinputstyle"
+            android:hint="Mobile number"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="#000"
+            android:textColorHint="@color/c2"
+            android:textIsSelectable="true"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/drivingLiscenceId"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/signupinputstyle"
+            android:hint="Liscence number"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="#000"
+            android:textColorHint="@color/c2"
+            android:textIsSelectable="true"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/driverNIDId"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/signupinputstyle"
+            android:hint="NID"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="#000"
+            android:textColorHint="@color/c2"
+            android:textIsSelectable="true"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/driverLoginCodeId"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/signupinputstyle"
+            android:hint="Login code"
+            android:inputType="numberPassword"
+            android:padding="10dp"
+            android:textColor="#000"
+            android:textColorHint="@color/c2"
+            android:textIsSelectable="true"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/progressbarSignUpId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginLeft="150dp" />
+
+        <Button
+            android:id="@+id/addDriverInfoId"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="40dp"
+            android:background="#aa2c5811"
+            android:text="Add Driver"
+            android:textColor="#FDFDFD"
+            android:textSize="25dp"
+            android:textStyle="normal" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#ffffff"
+        android:gravity="bottom">
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+
+            app:menu="@menu/navigation"/>
+
+    </LinearLayout>
+
+</LinearLayout>

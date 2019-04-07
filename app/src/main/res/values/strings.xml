@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Easy Trip</string>
+    <string name="title_home">Home</string>
+    <string name="title_history">History</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_more">More</string>
+
+    <string-array name="userSelectionSignIn">
+        <item>Select user</item>
+        <item>Owner</item>
+        <item>Borrower</item>
+        <item>Driver</item>
+    </string-array>
+
+
+</resources>

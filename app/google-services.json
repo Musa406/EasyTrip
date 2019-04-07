@@ -1,0 +1,52 @@
+{
+  "project_info": {
+    "project_number": "54159419784",
+    "firebase_url": "https://easy-trip-c8ac3.firebaseio.com",
+    "project_id": "easy-trip-c8ac3",
+    "storage_bucket": "easy-trip-c8ac3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:54159419784:android:512de5e54578fb13",
+        "android_client_info": {
+          "package_name": "com.example.whoami.easybook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "54159419784-ra01lll0kp8b7hqg60v40fkuee8k2l8j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.whoami.easybook",
+            "certificate_hash": "bf8a99b68e5c8027cca2e6d970641c87aea31b21"
+          }
+        },
+        {
+          "client_id": "54159419784-j37orgt4n81srplhc3u82kp05uq0nt1r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.whoami.easybook",
+            "certificate_hash": "c53f8f569b27b30913ec526c046e361de1d90226"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALe5RNqjRDoV2-hFFhUpOvciILqnxl-pE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "54159419784-508ls67f2lv94ru96arjcau16ifrhmjt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
