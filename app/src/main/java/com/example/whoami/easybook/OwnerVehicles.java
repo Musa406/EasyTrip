@@ -1,11 +1,11 @@
 package com.example.whoami.easybook;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -16,29 +16,27 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AvailableVehicleList extends AppCompatActivity {
+public class OwnerVehicles extends AppCompatActivity {
 
     ListView availableVehicleList;
     DatabaseReference databaseReference;
     Query query;
+
     private CustomTruckListAdaptor customTruckListAdaptor;
 
-    private List<VehicleInfoSaveRetrieve>vehicleList;
+    private List<VehicleInfoSaveRetrieve> vehicleList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_available_vehicle_list);
-
-        Intent intent = getIntent();
-        String pickup = intent.getStringExtra("pickup");
+        setContentView(R.layout.activity_owner_vehicles);
 
        // databaseReference = FirebaseDatabase.getInstance().getReference("Vehicle");
+        String currentuser = FirebaseAuth.getInstance().getCurrentUser().getUid();
         query = FirebaseDatabase.getInstance().getReference("Vehicle")
-                        .orderByChild("source")
-                        .equalTo(pickup);
-
-//        query.addListenerForSingleValueEvent(databaseReference);
+                        .orderByChild("vehicleOwnerUID")
+                        .equalTo(currentuser);
+       //query.addListenerForSingleValueEvent(databaseReference);
 
         availableVehicleList = (ListView) findViewById(R.id.availableVehicleListId);
 
@@ -64,7 +62,7 @@ public class AvailableVehicleList extends AppCompatActivity {
                     vehicleList.add(trucklist);
                 }
 
-                customTruckListAdaptor = new CustomTruckListAdaptor(AvailableVehicleList.this, vehicleList);
+                customTruckListAdaptor = new CustomTruckListAdaptor(OwnerVehicles.this, vehicleList);
                 availableVehicleList.setAdapter(customTruckListAdaptor);
             }
             @Override

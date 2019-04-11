@@ -29,11 +29,31 @@
             "package_name": "com.example.whoami.easybook",
             "certificate_hash": "c53f8f569b27b30913ec526c046e361de1d90226"
           }
+        },
+        {
+          "client_id": "54159419784-mcmd5g5seb529uh9lapa58e1kk1dhotv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.whoami.easybook",
+            "certificate_hash": "86628557618556afba6595b014eaffb49441321c"
+          }
+        },
+        {
+          "client_id": "54159419784-ek1a5jqjan9ql4gjsrvdjfv8pp7rsn7r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.whoami.easybook",
+            "certificate_hash": "964a9749348d0c7750cd4005aa39f3bd26b25f8f"
+          }
+        },
+        {
+          "client_id": "54159419784-508ls67f2lv94ru96arjcau16ifrhmjt.apps.googleusercontent.com",
+          "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyALe5RNqjRDoV2-hFFhUpOvciILqnxl-pE"
+          "current_key": "AIzaSyAhouyiQ_y1cuoUaB_e1ubbZ6b_Pt2xxE8"
         }
       ],
       "services": {

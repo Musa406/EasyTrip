@@ -11,6 +11,7 @@ import android.widget.TextView;
 import java.util.List;
 
 public class CustomTruckListAdaptor extends ArrayAdapter<VehicleInfoSaveRetrieve> {
+
     private Activity context;
     private List<VehicleInfoSaveRetrieve> vehicleLists;
 
@@ -23,6 +24,7 @@ public class CustomTruckListAdaptor extends ArrayAdapter<VehicleInfoSaveRetrieve
     }
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+
         LayoutInflater inflater = context.getLayoutInflater();
 
         View listViewItem = inflater.inflate(R.layout.custom_layout_for_search_vehicle, null, true);

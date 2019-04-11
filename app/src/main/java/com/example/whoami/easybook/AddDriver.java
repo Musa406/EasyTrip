@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -41,7 +42,8 @@ public class AddDriver extends AppCompatActivity {
                 loginCodeStr = loginCode.getText().toString().trim();
                 driverEmailStr = driverEmail.getText().toString().trim();
 
-                DriverInfoSaveRetrieve driverInfoSaveRetrieve = new DriverInfoSaveRetrieve(driverNameStr, mobileNoStr, driverEmailStr, drivingLiscenceStr, nidStr, loginCodeStr,"#2222");
+                String currentuser = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                DriverInfoSaveRetrieve driverInfoSaveRetrieve = new DriverInfoSaveRetrieve(driverNameStr, mobileNoStr, driverEmailStr, drivingLiscenceStr, nidStr, loginCodeStr,currentuser);
 
                 String id = databaseReference.push().getKey();
                 databaseReference.child(id).setValue(driverInfoSaveRetrieve);

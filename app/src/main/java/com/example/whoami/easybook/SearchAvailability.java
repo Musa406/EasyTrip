@@ -21,6 +21,7 @@ public class SearchAvailability extends AppCompatActivity implements View.OnClic
     public TimePickerDialog timePickerDialog;
     private Button dateBtn,timeBtn,picupPoint,destinationPoint;
     private Button searchButton;
+    private String src,dest,date,time;
 
 
     @Override
@@ -48,9 +49,17 @@ public class SearchAvailability extends AppCompatActivity implements View.OnClic
     public void onClick(View v) {
 
         if(v.getId()==R.id.searchVehicleButtonId){
-            Toast.makeText(getApplicationContext(),"searching",Toast.LENGTH_SHORT).show();
-            Intent searchButtonIntent = new Intent(SearchAvailability.this,AvailableVehicleList.class);
-            startActivity(searchButtonIntent);
+
+            if(src==null || dest ==null || date==null || time==null){
+                Toast.makeText(SearchAvailability.this, "Please fill up all the neccessary",Toast.LENGTH_SHORT).show();
+            }
+            else{
+                Toast.makeText(getApplicationContext(),"searching",Toast.LENGTH_SHORT).show();
+                Intent searchButtonIntent = new Intent(SearchAvailability.this,AvailableVehicleList.class);
+
+                searchButtonIntent.putExtra("pickup",src);
+                startActivity(searchButtonIntent);
+            }
         }
 
         else if(v.getId()==R.id.selectDateId){
@@ -63,7 +72,7 @@ public class SearchAvailability extends AppCompatActivity implements View.OnClic
             datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
                 @Override
                 public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                    String date = " "+month+"/"+dayOfMonth+"/"+year;
+                     date = " "+month+"/"+dayOfMonth+"/"+year;
                     dateBtn.setText(date);
                 }
             },currentYear,currentMonth,currentDay);
@@ -78,7 +87,7 @@ public class SearchAvailability extends AppCompatActivity implements View.OnClic
             timePickerDialog = new TimePickerDialog(SearchAvailability.this, new TimePickerDialog.OnTimeSetListener() {
                 @Override
                 public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                    String time = " "+hourOfDay+":"+minute;
+                     time = " "+hourOfDay+":"+minute;
                     timeBtn.setText(time);
                 }
             }, currentHour, currentMinute,false);
@@ -99,7 +108,7 @@ public class SearchAvailability extends AppCompatActivity implements View.OnClic
 
 
 
-                            String src = animals1[which];
+                            src = animals1[which];
                             picupPoint.setText(src);
 
                            // String src = animals1[which];
@@ -126,7 +135,7 @@ public class SearchAvailability extends AppCompatActivity implements View.OnClic
                 public void onClick(DialogInterface dialog, int which) {
 
 
-                            String dest = animals[which];
+                            dest = animals[which];
                             destinationPoint.setText(dest);
                             Toast.makeText(SearchAvailability.this,dest,Toast.LENGTH_SHORT).show();
 

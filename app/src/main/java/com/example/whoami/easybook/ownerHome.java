@@ -37,7 +37,9 @@ public class ownerHome extends AppCompatActivity{
         myVehicleOwner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"will be available soon",Toast.LENGTH_SHORT).show();
+                Intent ownerVehicles = new Intent(ownerHome.this,OwnerVehicles.class);
+                startActivity(ownerVehicles);
+                //Toast.makeText(getApplicationContext(),"will be available soon",Toast.LENGTH_SHORT).show();
             }
         });
         trackVehicleOwner.setOnClickListener(new View.OnClickListener() {

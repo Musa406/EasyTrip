@@ -124,21 +124,25 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private void userSignIn(String mail, String pass) {
         if(mail.isEmpty()) {
+            progressBarSignIn.setVisibility(View.GONE);
             email.setError("Enter an email address");
             email.requestFocus();
             return;
         }
         if(!android.util.Patterns.EMAIL_ADDRESS.matcher(mail).matches()) {
+            progressBarSignIn.setVisibility(View.GONE);
             email.setError("Enter a valid email address");
             email.requestFocus();
             return;
         } //checking the validity of the password
         if(pass.isEmpty()) {
+            progressBarSignIn.setVisibility(View.GONE);
             password.setError("Enter a password");
             password.requestFocus();
             return;
         }
         if(password.length()<6){
+            progressBarSignIn.setVisibility(View.GONE);
             password.setError("Minimum length of password should be 6");
             password.requestFocus();
             return;
@@ -162,6 +166,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         startActivity(intentBorrowerHomeFromSignUp);
                     }
                     else{
+                        progressBarSignIn.setVisibility(View.GONE);
                         Toast.makeText(getApplicationContext(),"under construction",Toast.LENGTH_SHORT).show();
                     }
 

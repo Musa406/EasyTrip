@@ -13,6 +13,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
@@ -103,28 +104,42 @@ public class Signup extends AppCompatActivity{
                          selectedUserForSignUP = (RadioButton) findViewById(selectedUserPos);
                          userTypeStr = selectedUserForSignUP.getText().toString();
                          databaseReference = FirebaseDatabase.getInstance().getReference(userTypeStr );
+                         String currentuser = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
+                         Toast.makeText(getApplicationContext(),"writing to database",Toast.LENGTH_SHORT).show();
                          if(userTypeStr.equals("Owner")){
 
-                             UserInfoSaveRetrieve saveRetrieveUserInfo = new UserInfoSaveRetrieve(emailStr,usernameStr,mobileStr,nidStr,passwordStr,userTypeStr,"#1122");
-                             databaseReference.child(mobileStr).setValue(saveRetrieveUserInfo);
 
-                             Toast.makeText(getApplicationContext(),"SignUp succesful",Toast.LENGTH_SHORT).show();
-                             progressBarForSignUp.setVisibility(View.GONE);
+                             Toast.makeText(getApplicationContext(),"current user "+currentuser,Toast.LENGTH_SHORT).show();
 
-                             Intent intentOwnerHomeFromSignUp = new Intent(Signup.this,ownerHome.class);
-                             startActivity(intentOwnerHomeFromSignUp);
+                             UserInfoSaveRetrieve saveRetrieveUserInfo = new UserInfoSaveRetrieve(emailStr,usernameStr,mobileStr,nidStr,passwordStr,userTypeStr,currentuser);
+
+                             databaseReference.child(currentuser).setValue(saveRetrieveUserInfo).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                 @Override
+                                 public void onSuccess(Void aVoid) {
+                                     Toast.makeText(getApplicationContext(),"SignUp succesful",Toast.LENGTH_SHORT).show();
+                                     progressBarForSignUp.setVisibility(View.GONE);
+
+                                     Intent intentMainActivityFromSignUp= new Intent(Signup.this,MainActivity.class);
+                                     startActivity(intentMainActivityFromSignUp);
+                                 }
+                             });
+
+
                          }
 
                          else{
-                             UserInfoSaveRetrieve saveRetrieveUserInfo = new UserInfoSaveRetrieve(emailStr,usernameStr,mobileStr,nidStr,passwordStr,userTypeStr,"#1122");
-                             databaseReference.child(mobileStr).setValue(saveRetrieveUserInfo);
+                             UserInfoSaveRetrieve saveRetrieveUserInfo = new UserInfoSaveRetrieve(emailStr,usernameStr,mobileStr,nidStr,passwordStr,userTypeStr,currentuser);
+                             databaseReference.child(currentuser).setValue(saveRetrieveUserInfo).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                 @Override
+                                 public void onSuccess(Void aVoid) {
+                                     Toast.makeText(getApplicationContext(),"SignUp succesful",Toast.LENGTH_SHORT).show();
+                                     progressBarForSignUp.setVisibility(View.GONE);
 
-                             Toast.makeText(getApplicationContext(),"SignUp succesful",Toast.LENGTH_SHORT).show();
-                             progressBarForSignUp.setVisibility(View.GONE);
-
-                             Intent intentBorrowerHomeFromSignUp = new Intent(Signup.this,UserHomeInterface.class);
-                             startActivity(intentBorrowerHomeFromSignUp);
+                                     Intent intentMainActivityFromSignUp = new Intent(Signup.this,MainActivity.class);
+                                     startActivity(intentMainActivityFromSignUp);
+                                 }
+                             });
                          }
                      }
                      catch (NullPointerException e){

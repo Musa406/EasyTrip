@@ -5,7 +5,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -28,7 +31,7 @@ public class AddVehicle extends AppCompatActivity {
         carryingCapacity = (EditText) findViewById(R.id.carryingCapacityId);
         vehicleType = (EditText) findViewById(R.id.vehicleTypeId);
         addVehicleBtn = (Button) findViewById(R.id.add_Vehicle_infoId);
-        databaseReference = FirebaseDatabase.getInstance().getReference("Vehicle");
+
 
         addVehicleBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,10 +42,18 @@ public class AddVehicle extends AppCompatActivity {
                 carryingCapacityStr = carryingCapacity.getText().toString().trim();
                 vehicleTypeStr = vehicleType.getText().toString().trim();
 
-                VehicleInfoSaveRetrieve vehicleInfoSaveRetrieve = new VehicleInfoSaveRetrieve(numberPlateStr, chassisNoStr,vehicleSizeStr,carryingCapacityStr,vehicleTypeStr);
+                String currentuser = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                databaseReference = FirebaseDatabase.getInstance().getReference("Vehicle");
+
+                VehicleInfoSaveRetrieve vehicleInfoSaveRetrieve = new VehicleInfoSaveRetrieve(numberPlateStr, chassisNoStr,vehicleSizeStr,carryingCapacityStr,vehicleTypeStr,currentuser,"Dhaka","Dhaka",false,false);
 
                     String id = databaseReference.push().getKey();
-                    databaseReference.child(id).setValue(vehicleInfoSaveRetrieve);
+                    databaseReference.child(id).setValue(vehicleInfoSaveRetrieve).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            Toast.makeText(AddVehicle.this,"Successfully added !!",Toast.LENGTH_SHORT).show();
+                        }
+                    });
             }
         });
 
