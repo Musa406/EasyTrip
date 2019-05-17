@@ -13,7 +13,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4"
+        android:layout_weight="3"
         android:weightSum="2"
         android:orientation="horizontal">
 
@@ -126,7 +126,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4"
+        android:layout_weight="3"
         android:gravity="center"
         android:weightSum="2"
         android:orientation="horizontal"
@@ -206,9 +206,9 @@
 
                     android:layout_height="74dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/circle_profile"
-                    android:padding="10dp"
-                    android:src="@drawable/profile_icon" />
+
+                    android:padding="5dp"
+                    android:src="@drawable/tracking" />
 
                 <View
                     android:layout_width="match_parent"
@@ -222,7 +222,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="20dp"
-                    android:text="Profile"
+                    android:text="Location"
                     android:textAppearance="?android:textAppearanceLarge"
                     android:textStyle="bold"
 
@@ -235,11 +235,21 @@
 
     </LinearLayout>
 
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="2"
+        android:layout_height="0dp">
+
+    </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="#ffffff"
+        android:layout_marginBottom="10dp"
         android:gravity="bottom">
 
         <android.support.design.widget.BottomNavigationView

@@ -11,13 +11,13 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class CustomTruckListAdaptor extends ArrayAdapter<VehicleInfoSaveRetrieve> {
+public class CustomTruckListAdaptorOwner extends ArrayAdapter<VehicleInfoSaveRetrieve> {
 
     private Activity context;
     private List<VehicleInfoSaveRetrieve> vehicleLists;
 
 
-    public CustomTruckListAdaptor(Activity context, List<VehicleInfoSaveRetrieve> vehicleLists) {
+    public CustomTruckListAdaptorOwner(Activity context, List<VehicleInfoSaveRetrieve> vehicleLists) {
 
         super(context, R.layout.custom_layout_for_search_vehicle, vehicleLists);
         this.context = context;
@@ -37,14 +37,6 @@ public class CustomTruckListAdaptor extends ArrayAdapter<VehicleInfoSaveRetrieve
         TextView weightCapacityId = listViewItem.findViewById(R.id.vehicleWeightCapacity);
         TextView vehicleType = listViewItem.findViewById(R.id.vehicleTypeId);
         TextView tripCost = listViewItem.findViewById(R.id.tripCostId);
-
-
-        vehicleNumberPlate.setText("VN: #"+vehicleList.getNumberPlate());
-        vehicleCarryingCapacity.setText("capacity: "+vehicleList.getCarryingCapacity());
-        weightCapacityId.setText("Weight Capacity: "+vehicleList.getWeightCapacity());
-        vehicleType.setText("Type: "+vehicleList.getVehicleType());
-        tripCost.setText("2200 TK.");
-
         ImageView vehicleImage = listViewItem.findViewById(R.id.truckImageId);
 
 

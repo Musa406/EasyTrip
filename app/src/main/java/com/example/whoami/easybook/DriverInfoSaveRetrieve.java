@@ -2,13 +2,13 @@ package com.example.whoami.easybook;
 
 class DriverInfoSaveRetrieve {
 
-    private String email, mobile, NID, password, ownerID, drivingLiscence,name;
+    private String email, mobile, NID, password, ownerID, drivingLiscence,name,available,driverID,tripID;
 
     public DriverInfoSaveRetrieve(){
 
     }
 
-    public DriverInfoSaveRetrieve(String name, String mobile, String email,String drivingLiscence, String NID, String password,  String ownerID) {
+    public DriverInfoSaveRetrieve(String name, String mobile, String email,String drivingLiscence, String NID, String password,  String ownerID, String available,String driverID,String tripID) {
         this.email = email;
         this.mobile = mobile;
         this.NID = NID;
@@ -16,6 +16,25 @@ class DriverInfoSaveRetrieve {
         this.ownerID = ownerID;
         this.name = name;
         this.drivingLiscence = drivingLiscence;
+        this.available = available; //yes or no
+        this.driverID = driverID;
+        this.tripID = tripID;
+    }
+
+    public String getTripID() {
+        return tripID;
+    }
+
+    public void setTripID(String tripID) {
+        this.tripID = tripID;
+    }
+
+    public String getDriverID() {
+        return driverID;
+    }
+
+    public void setDriverID(String driverID) {
+        this.driverID = driverID;
     }
 
     public String getName() {
@@ -74,4 +93,11 @@ class DriverInfoSaveRetrieve {
         this.drivingLiscence = drivingLiscence;
     }
 
+    public String getAvailable() {
+        return available;
+    }
+
+    public void setAvailable(String available) {
+        this.available = available;
+    }
 }

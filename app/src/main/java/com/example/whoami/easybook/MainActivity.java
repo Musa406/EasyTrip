@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     FirebaseAuth mAuth;
     private  String selectedUserForSignIn;
     private ProgressBar progressBarSignIn;
+    static String passWord,userName;
 
 
     @Override
@@ -107,8 +108,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 progressBarSignIn.setVisibility(View.VISIBLE);
 
                 try {
-                    String userName = email.getText().toString();
-                    String passWord = password.getText().toString();
+                     userName = email.getText().toString();
+                     passWord = password.getText().toString();
 
                     userSignIn(userName,passWord);
 

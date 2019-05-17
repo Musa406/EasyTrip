@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="#1D1D2C"
+    tools:context=".TripConfirmation">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_width="300dp"
+        android:background="#FFFFFF"
+        android:layout_height="360dp">
+
+        <TextView
+            android:textColor="#ff22"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirmation Successful"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            />
+        <TextView
+            android:textColor="#000000"
+            android:layout_marginLeft="20dp"
+
+            android:textSize="30dp"
+            android:id="@+id/sourceID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="source:"
+            />
+        <TextView
+            android:textColor="#000000"
+            android:layout_marginLeft="20dp"
+
+            android:textSize="30dp"
+            android:id="@+id/destID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dest:"
+            />
+
+        <TextView
+            android:textColor="#000000"
+            android:layout_marginLeft="20dp"
+
+            android:textSize="30dp"
+            android:id="@+id/dateID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="date:"
+            />
+        <TextView
+            android:textColor="#000000"
+            android:layout_marginLeft="20dp"
+
+            android:textSize="30dp"
+            android:id="@+id/timeID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="time:"
+            />
+        <TextView
+            android:textColor="#000000"
+            android:layout_marginLeft="20dp"
+
+            android:textSize="30dp"
+            android:id="@+id/costID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cost:  2000 tk."
+            android:layout_marginBottom="10dp"
+            />
+
+    </LinearLayout>
+</LinearLayout>

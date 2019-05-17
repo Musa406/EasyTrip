@@ -112,7 +112,7 @@ public class Signup extends AppCompatActivity{
 
                              Toast.makeText(getApplicationContext(),"current user "+currentuser,Toast.LENGTH_SHORT).show();
 
-                             UserInfoSaveRetrieve saveRetrieveUserInfo = new UserInfoSaveRetrieve(emailStr,usernameStr,mobileStr,nidStr,passwordStr,userTypeStr,currentuser);
+                             UserInfoSaveRetrieve saveRetrieveUserInfo = new UserInfoSaveRetrieve(emailStr,usernameStr,mobileStr,nidStr,passwordStr,null,currentuser);
 
                              databaseReference.child(currentuser).setValue(saveRetrieveUserInfo).addOnSuccessListener(new OnSuccessListener<Void>() {
                                  @Override
@@ -129,7 +129,7 @@ public class Signup extends AppCompatActivity{
                          }
 
                          else{
-                             UserInfoSaveRetrieve saveRetrieveUserInfo = new UserInfoSaveRetrieve(emailStr,usernameStr,mobileStr,nidStr,passwordStr,userTypeStr,currentuser);
+                             UserInfoSaveRetrieve saveRetrieveUserInfo = new UserInfoSaveRetrieve(emailStr,usernameStr,mobileStr,nidStr,passwordStr," ",currentuser);
                              databaseReference.child(currentuser).setValue(saveRetrieveUserInfo).addOnSuccessListener(new OnSuccessListener<Void>() {
                                  @Override
                                  public void onSuccess(Void aVoid) {

@@ -45,7 +45,7 @@ public class AddVehicle extends AppCompatActivity {
                 String currentuser = FirebaseAuth.getInstance().getCurrentUser().getUid();
                 databaseReference = FirebaseDatabase.getInstance().getReference("Vehicle");
 
-                VehicleInfoSaveRetrieve vehicleInfoSaveRetrieve = new VehicleInfoSaveRetrieve(numberPlateStr, chassisNoStr,vehicleSizeStr,carryingCapacityStr,vehicleTypeStr,currentuser,"Dhaka","Dhaka",false,false);
+                VehicleInfoSaveRetrieve vehicleInfoSaveRetrieve = new VehicleInfoSaveRetrieve(numberPlateStr, chassisNoStr,vehicleSizeStr,carryingCapacityStr,vehicleTypeStr,currentuser,"Dhaka","Dhaka",false,false,"  "," ");
 
                     String id = databaseReference.push().getKey();
                     databaseReference.child(id).setValue(vehicleInfoSaveRetrieve).addOnSuccessListener(new OnSuccessListener<Void>() {

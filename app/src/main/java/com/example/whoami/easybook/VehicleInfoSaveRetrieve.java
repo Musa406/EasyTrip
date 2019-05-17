@@ -2,14 +2,14 @@ package com.example.whoami.easybook;
 
 public class VehicleInfoSaveRetrieve {
 
-    private String numberPlate,chassisNumber,carryingCapacity,weightCapacity,vehicleType,vehicleOwnerUID,source,destination;
+    private String numberPlate,chassisNumber,carryingCapacity,weightCapacity,vehicleType,vehicleOwnerUID,source,destination,driverUID,tripID;
     private Boolean confirmed,ontheway;
 
     public VehicleInfoSaveRetrieve(){
 
     }
 
-    public VehicleInfoSaveRetrieve(String numberPlate, String chassisNumber,String carryingCapacity,String weightCapacity, String vehicleType, String vehicleOwnerUID, String source, String destination,boolean confirmed,boolean ontheway) {
+    public VehicleInfoSaveRetrieve(String numberPlate, String chassisNumber,String carryingCapacity,String weightCapacity, String vehicleType, String vehicleOwnerUID, String source, String destination,boolean confirmed,boolean ontheway,String driverUID,String tripID) {
         this.numberPlate = numberPlate;
         this.chassisNumber = chassisNumber;
         this.carryingCapacity = carryingCapacity;
@@ -20,16 +20,11 @@ public class VehicleInfoSaveRetrieve {
         this.destination = destination;
         this.confirmed = confirmed;
         this.ontheway = ontheway;
+        this.driverUID = driverUID;
+        this.tripID = tripID;
 
     }
 
-    public String getVehicleOwnerUID() {
-        return vehicleOwnerUID;
-    }
-
-    public void setVehicleOwnerUID(String vehicleOwnerUID) {
-        this.vehicleOwnerUID = vehicleOwnerUID;
-    }
 
     public String getSource() {
         return source;
@@ -102,4 +97,30 @@ public class VehicleInfoSaveRetrieve {
     public void setVehicleType(String vehicleType) {
         this.vehicleType = vehicleType;
     }
+
+    public String getDriverUID() {
+        return driverUID;
+    }
+
+    public void setDriverUID(String driverUID) {
+        this.driverUID = driverUID;
+    }
+
+    public String getTripID() {
+        return tripID;
+    }
+
+    public void setTripID(String tripID) {
+        this.tripID = tripID;
+    }
+
+
+    public String getVehicleOwnerUID() {
+        return vehicleOwnerUID;
+    }
+
+    public void setVehicleOwnerUID(String vehicleOwnerUID) {
+        this.vehicleOwnerUID = vehicleOwnerUID;
+    }
+
 }

@@ -12,6 +12,7 @@
         android:divider="#5A4680"
         android:dividerHeight="4dp"
         android:id="@+id/availableVehicleListId"
+        android:clickable="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
