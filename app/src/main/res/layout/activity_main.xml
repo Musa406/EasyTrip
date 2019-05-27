@@ -21,8 +21,8 @@
             android:id="@+id/emailId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:layout_marginRight="60dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:background="@drawable/signinpuntstyle"
             android:gravity="center"
             android:hint="Email"
@@ -30,15 +30,15 @@
             android:padding="10dp"
             android:textColorHint="#082b30"
             android:textSize="30dp"
-
+            android:drawableLeft="@drawable/email_black_24dp"
             android:textStyle="italic" />
 
         <EditText
             android:layout_marginTop="20dp"
             android:gravity="center"
             android:background="@drawable/signinpuntstyle"
-            android:layout_marginLeft="60dp"
-            android:layout_marginRight="60dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:id="@+id/passwordid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,6 +47,7 @@
             android:inputType="textPassword"
             android:textColorHint="#082b30"
             android:textSize="30dp"
+            android:drawableLeft="@drawable/key_black_24dp"
             android:textStyle="italic" />
 
         <Spinner
