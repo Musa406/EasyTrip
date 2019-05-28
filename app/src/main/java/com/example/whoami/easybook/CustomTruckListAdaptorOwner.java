@@ -45,12 +45,8 @@ public class CustomTruckListAdaptorOwner extends ArrayAdapter<VehicleInfoSaveRet
         weightCapacityId.setText("Weight Capacity: "+vehicleList.getWeightCapacity());
         vehicleType.setText("Type: "+vehicleList.getVehicleType());
 
-        if(vehicleList.getVehicleType().equals("covered")){
-            vehicleImage.setImageResource(R.drawable.covered_truck);
-        }
-        else if(vehicleList.getVehicleType().equals("miniTruck")){
-            vehicleImage.setImageResource(R.drawable.mini_truck);
-        }
+        vehicleImage.setImageResource(R.drawable.opened_truck);
+
 
         return listViewItem ;
     }

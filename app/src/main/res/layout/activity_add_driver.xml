@@ -42,7 +42,7 @@
             android:inputType="text"
             android:padding="10dp"
             android:textColor="#000"
-            android:textColorHint="@color/c2"
+            android:textColorHint="#817979"
             android:textIsSelectable="true"
             android:textStyle="bold" />
 
@@ -58,7 +58,7 @@
             android:inputType="text"
             android:padding="10dp"
             android:textColor="#000"
-            android:textColorHint="@color/c2"
+            android:textColorHint="#817979"
             android:textIsSelectable="true"
             android:textStyle="bold" />
 
@@ -70,11 +70,11 @@
             android:layout_marginRight="80dp"
             android:layout_marginBottom="15dp"
             android:background="@drawable/signupinputstyle"
-            android:hint="Mobile number"
+            android:hint="Email ID"
             android:inputType="text"
             android:padding="10dp"
             android:textColor="#000"
-            android:textColorHint="@color/c2"
+            android:textColorHint="#817979"
             android:textIsSelectable="true"
             android:textStyle="bold" />
 
@@ -90,7 +90,7 @@
             android:inputType="text"
             android:padding="10dp"
             android:textColor="#000"
-            android:textColorHint="@color/c2"
+            android:textColorHint="#817979"
             android:textIsSelectable="true"
             android:textStyle="bold" />
 
@@ -106,7 +106,7 @@
             android:inputType="text"
             android:padding="10dp"
             android:textColor="#000"
-            android:textColorHint="@color/c2"
+            android:textColorHint="#817979"
             android:textIsSelectable="true"
             android:textStyle="bold" />
 
@@ -122,7 +122,7 @@
             android:inputType="numberPassword"
             android:padding="10dp"
             android:textColor="#000"
-            android:textColorHint="@color/c2"
+            android:textColorHint="#817979"
             android:textIsSelectable="true"
             android:textStyle="bold" />
 

@@ -11,6 +11,21 @@
 
     tools:context=".MainActivity">
 
+    <TextView
+        android:background="#A1EBF8"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:text="My Goods Location"
+        android:textStyle="bold"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:drawableRight="@drawable/source"
+        android:drawableLeft="@drawable/source"
+        />
+
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:map="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -18,7 +33,7 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="14"
+        android:layout_weight="12.5"
         tools:context=".MapsActivity" />
 
 
@@ -27,10 +42,11 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="#185b0d"
+        android:background="@drawable/map_button"
         android:text="Back"
         android:textColor="#FFFFFF"
         android:textSize="25dp"
+
         />
 
 </LinearLayout>

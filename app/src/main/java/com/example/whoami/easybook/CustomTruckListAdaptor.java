@@ -15,6 +15,7 @@ public class CustomTruckListAdaptor extends ArrayAdapter<VehicleInfoSaveRetrieve
 
     private Activity context;
     private List<VehicleInfoSaveRetrieve> vehicleLists;
+    static int tripFare;
 
 
     public CustomTruckListAdaptor(Activity context, List<VehicleInfoSaveRetrieve> vehicleLists) {
@@ -43,21 +44,28 @@ public class CustomTruckListAdaptor extends ArrayAdapter<VehicleInfoSaveRetrieve
         vehicleCarryingCapacity.setText("capacity: "+vehicleList.getCarryingCapacity());
         weightCapacityId.setText("Weight Capacity: "+vehicleList.getWeightCapacity());
         vehicleType.setText("Type: "+vehicleList.getVehicleType());
-        tripCost.setText("2200 TK.");
+
+        double tripcost = SearchAvailability.cost;
+        //String.format("%.1f%n", tripcost);
+        int intCost = (int)tripcost;
+
 
         ImageView vehicleImage = listViewItem.findViewById(R.id.truckImageId);
 
-
-        vehicleNumberPlate.setText("VN: #"+vehicleList.getNumberPlate());
-        vehicleCarryingCapacity.setText("capacity: "+vehicleList.getCarryingCapacity());
-        weightCapacityId.setText("Weight Capacity: "+vehicleList.getWeightCapacity());
-        vehicleType.setText("Type: "+vehicleList.getVehicleType());
-
-        if(vehicleList.getVehicleType().equals("covered")){
+        if(vehicleList.getVehicleType().toString().equals("covered truck")){
             vehicleImage.setImageResource(R.drawable.covered_truck);
+            tripFare = (int)(intCost+ (intCost*.20));
+            tripCost.setText("Fare: "+tripFare+" Tk.");
         }
-        else if(vehicleList.getVehicleType().equals("miniTruck")){
-            vehicleImage.setImageResource(R.drawable.mini_truck);
+        else if(vehicleList.getVehicleType().toString().equals("mini truck")){
+            vehicleImage.setImageResource(R.drawable.mini_truck3);
+            tripFare = (int)(intCost- (intCost*.50));
+            tripCost.setText("Fare: "+tripFare+" Tk.");
+        }
+        else{
+            vehicleImage.setImageResource(R.drawable.opened_truck);
+            tripFare  = (int)intCost;
+            tripCost.setText("Fare: "+tripFare+" Tk.");
         }
 
         return listViewItem ;

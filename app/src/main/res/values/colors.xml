@@ -7,10 +7,10 @@
 
 
     <color name="bgcolor">#c7e1e0</color>
-    <color name="c1">#385a7e</color>
-    <color name="c2">#4F2525</color>
-    <color name="c3">#565e64</color>
-    <color name="c4">#433d40</color>
+    <color name="c1">#FFBD5D</color>
+    <color name="c2">#33ccff</color>
+    <color name="c3">#009688</color>
+    <color name="c4">#D3A773</color>
 
 
 </resources>

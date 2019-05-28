@@ -5,12 +5,67 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_more">More</string>
 
+    <string-array name="vehicleType">
+        <item>covered truck</item>
+        <item>opened truck</item>
+        <item>mini truck</item>
+    </string-array>
+
+    <string-array name="carryingCapacity">
+        <item>100 CBM</item>
+        <item>150 CBM</item>
+        <item>220 CBM</item>
+        <item>250 CBM</item>
+        <item>280 CBM</item>
+        <item>300 CBM</item>
+    </string-array>
+
+    <string-array name="weightCapacity">
+        <item>5 ton</item>
+        <item>10 ton</item>
+        <item>15 ton</item>
+        <item>20 ton</item>
+        <item>25 ton</item>
+        <item>30 ton</item>
+    </string-array>
+
+
+    <string-array name="place_name">
+        <item>University of Dhaka,Dhaka#23.7339881#90.3929682</item>
+        <item>Nilphamari#25.9381428#88.8264361</item>
+        <item>Chandra,Dhaka#23.148726#90.663078</item>
+        <item>Mirpur,Dhaka#23.822350#90.365417</item>
+        <item>Baraiyarhat,Chittagong#22.895445#91.533592</item>
+        <item>Dalagram#25.999601#89.240723</item>
+        <item>Chhagalnaiya,Chittagong#23.038628#91.518440</item>
+        <item>Daudpur#25.396395#89.116692</item>
+        <item>Jagannathpur,Upazila#24.753710#91.559608</item>
+        <item>Magura#23.490938#89.421135</item>
+        <item>Bhatiari#22.467989#91.727425</item>
+        <item>Kaliakair#24.069452#90.222122</item>
+        <item>Joypurhat#25.105101#89.028877</item>
+        <item>Haluaghat#25.123150#90.339149</item>
+        <item>Nabiganj#24.567188#91.513603</item>
+        <item>Gournadi#22.974237#90.222122</item>
+        <item>Bagha#24.197485#88.837105</item>
+        <item>Sharsha#23.053751#88.952309</item>
+        <item>Benapole#23.041824#88.894157</item>
+        <item>Kotalipara#22.989843#89.994034</item>
+        <item>Uttara,Dhaka#23.876263#90.379631</item>
+        <item>Ashulia#23.899776#90.323082</item>
+        <item>Karful,Dhaka#23.790552#90.391769</item>
+        <item>Kotwali,Chittagong#22.341415#91.826958</item>
+        <item>Jalirpar#23.209166#89.965324</item>
+        <item>Gulshan,Dhaka#23.797911#90.414391</item>
+    </string-array>
+
     <string-array name="userSelectionSignIn">
         <item>Select user</item>
         <item>Owner</item>
         <item>Borrower</item>
-        <item>Driver</item>
     </string-array>
+
+
 
 
 

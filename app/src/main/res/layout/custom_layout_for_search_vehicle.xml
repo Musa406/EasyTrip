@@ -16,11 +16,12 @@
         android:layout_height="match_parent">
 
         <ImageView
+            android:layout_marginTop="10dp"
             android:id="@+id/truckImageId"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="4"
-            android:src="@drawable/rsz_1rsz_1truck"
+            android:src="@drawable/covered_truck"
 
             />
 

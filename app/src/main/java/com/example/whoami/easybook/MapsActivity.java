@@ -79,16 +79,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                     if(user.getTripID().equals(tripID)){
                         LatLng location=new LatLng(user.getLatitude(),user.getLongitude());
-                        mMap.addMarker(new MarkerOptions().position(location).title("Vehicle")).setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
+//                        mMap.addMarker(new MarkerOptions().position(location).title("Vehicle")).icon(BitmapDescriptorFactory.fromResource(R.drawable.truck_map_icon));
+                        mMap.addMarker(new MarkerOptions().position(location).title("Truck Location").icon(BitmapDescriptorFactory.fromResource(R.drawable.truck_map_icon)));
                         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(location, (float) 16.0));
 
                         mMap.addCircle(
                                 new CircleOptions()
                                         .center(location)
-                                        .radius(500)
+                                        .radius(50)
                                         .strokeWidth(2f)
-                                        .strokeColor(Color.RED)
-                                        .fillColor(Color.argb(70,150,50,50))
+                                        .strokeColor(Color.BLUE)
+                                        .fillColor(Color.argb(20,0,50,100))
 
                         );
                         mMap.getUiSettings().setZoomControlsEnabled(true);

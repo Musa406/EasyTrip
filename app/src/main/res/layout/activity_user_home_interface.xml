@@ -25,6 +25,7 @@
             android:layout_margin="20dp"
             android:layout_weight="1"
             android:clickable="true"
+            app:cardCornerRadius="30dp"
             android:foreground="?android:attr/selectableItemBackground"
             android:padding="20dp">
 
@@ -48,7 +49,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="5dp"
                     android:layout_marginTop="10dp"
-                    android:background="@color/c1"
+                    android:background="#2196F3"
 
                     ></View>
 
@@ -77,6 +78,7 @@
             android:layout_margin="20dp"
             android:layout_weight="1"
             android:clickable="true"
+            app:cardCornerRadius="30dp"
             android:foreground="?android:attr/selectableItemBackground">
 
             <LinearLayout
@@ -141,6 +143,7 @@
             android:layout_margin="20dp"
             android:layout_weight="1"
             android:clickable="true"
+            app:cardCornerRadius="30dp"
             android:foreground="?android:attr/selectableItemBackground"
             >
 
@@ -164,7 +167,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="5dp"
                     android:layout_marginTop="10dp"
-                    android:background="@color/c1"
+                    android:background="#83C3F8"
 
                     ></View>
 
@@ -192,6 +195,7 @@
             android:layout_margin="20dp"
             android:layout_weight="1"
             android:clickable="true"
+            app:cardCornerRadius="30dp"
             android:foreground="?android:attr/selectableItemBackground">
 
             <LinearLayout
@@ -253,7 +257,7 @@
         android:gravity="bottom">
 
         <android.support.design.widget.BottomNavigationView
-            android:id="@+id/navigation"
+            android:id="@+id/navigationid"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"

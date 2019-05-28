@@ -28,10 +28,11 @@ public class AvailableVehicleList extends AppCompatActivity {
     ListView availableVehicleList;
     TextView numberPlateView;
     String numberPlateStr;
-    String []numPlate;
+    static String []numPlate;
     String tripID;
     String childIDTrip,childIDVehicle;
-    int tripId;
+    static int tripId;
+    static String NP;
 
     List<String> driverChildKey1 = new ArrayList<String>();
     List<String> driverChildKey2= new ArrayList<String>();
@@ -92,7 +93,7 @@ public class AvailableVehicleList extends AppCompatActivity {
                         for(int j=0; j<vehicleList.size(); j++){
 
                             if(vehicleList.get(j).getNumberPlate().equals(numPlate[1])) {
-                                String NP = vehicleList.get(j).getNumberPlate();
+                                 NP = vehicleList.get(j).getNumberPlate();
                                 String CN = vehicleList.get(j).getChassisNumber();
                                 String size = vehicleList.get(j).getCarryingCapacity();
                                 String weight = vehicleList.get(j).getWeightCapacity();

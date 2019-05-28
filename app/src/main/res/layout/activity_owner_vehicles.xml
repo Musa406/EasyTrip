@@ -4,13 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".AvailableVehicleList">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text="My Vehicles(Owner)"
+        android:background="@drawable/map_button"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        />
 
     <ListView
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:divider="#5A4680"
-        android:dividerHeight="4dp"
+        android:divider="@drawable/map_button"
+        android:dividerHeight="10dp"
         android:id="@+id/availableVehicleListId"
         android:layout_width="match_parent"
         android:layout_height="match_parent">

@@ -10,7 +10,6 @@
     tools:context=".UserHomeInterface">
 
     <LinearLayout
-
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="9"
@@ -26,14 +25,13 @@
             android:text="Vehicle Information"
             android:textAlignment="center"
             android:textColor="#0A0A0A"
-
             android:textSize="30dp"
             android:textStyle="normal" />
 
         <EditText
             android:id="@+id/vehicleNumberId"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_marginLeft="70dp"
             android:layout_marginRight="80dp"
             android:layout_marginBottom="15dp"
@@ -42,14 +40,14 @@
             android:inputType="text"
             android:padding="10dp"
             android:textColor="#000"
-            android:textColorHint="@color/c2"
+            android:textColorHint="#817979"
             android:textIsSelectable="true"
             android:textStyle="bold" />
 
         <EditText
             android:id="@+id/chassisNumberId"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_marginLeft="70dp"
             android:layout_marginRight="80dp"
             android:layout_marginBottom="15dp"
@@ -58,57 +56,92 @@
             android:inputType="text"
             android:padding="10dp"
             android:textColor="#000"
-            android:textColorHint="@color/c2"
+            android:textColorHint="#817979"
             android:textIsSelectable="true"
             android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/vehicleSizeId"
+        <Button
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginLeft="70dp"
-            android:layout_marginRight="80dp"
-            android:layout_marginBottom="15dp"
-            android:background="@drawable/signupinputstyle"
-            android:hint="Vehicle Size(CBM)"
-            android:inputType="text"
-            android:padding="10dp"
-            android:textColor="#000"
-            android:textColorHint="@color/c2"
-            android:textIsSelectable="true"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/carryingCapacityId"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginLeft="70dp"
-            android:layout_marginRight="80dp"
-            android:layout_marginBottom="15dp"
-            android:background="@drawable/signupinputstyle"
-            android:hint="Carrying Capacity(weight)"
-            android:inputType="text"
-            android:padding="10dp"
-            android:textColor="#000"
-            android:textColorHint="@color/c2"
-            android:textIsSelectable="true"
-            android:textStyle="bold" />
-
-        <EditText
+            android:layout_height="50dp"
             android:id="@+id/vehicleTypeId"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:text="Vehicle Type"
+            android:layout_marginBottom="20dp"
             android:layout_marginLeft="70dp"
             android:layout_marginRight="80dp"
-            android:layout_marginBottom="15dp"
-            android:background="@drawable/signupinputstyle"
-            android:hint="Vehicle Type"
-            android:inputType="text"
-            android:padding="10dp"
-            android:textColor="#000"
-            android:textColorHint="@color/c2"
-            android:textIsSelectable="true"
-            android:textStyle="bold" />
+            android:background="#ffffff"
+            />
+
+        <!--<EditText-->
+            <!--android:id="@+id/vehicleTypeId"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_marginLeft="70dp"-->
+            <!--android:layout_marginRight="80dp"-->
+            <!--android:layout_marginBottom="15dp"-->
+            <!--android:background="@drawable/signupinputstyle"-->
+            <!--android:hint="Vehicle Type"-->
+            <!--android:inputType="text"-->
+            <!--android:padding="10dp"-->
+            <!--android:textColor="#000"-->
+            <!--android:textColorHint="@color/c2"-->
+            <!--android:textIsSelectable="true"-->
+            <!--android:textStyle="bold" />-->
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/carryingCapacityId"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="80dp"
+            android:text="Carrying capacity"
+            android:background="#ffffff"
+            />
+
+        <!--<EditText-->
+            <!--android:id="@+id/vehicleSizeId"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_marginLeft="70dp"-->
+            <!--android:layout_marginRight="80dp"-->
+            <!--android:layout_marginBottom="15dp"-->
+            <!--android:background="@drawable/signupinputstyle"-->
+            <!--android:hint="Vehicle Size(CBM)"-->
+            <!--android:inputType="text"-->
+            <!--android:padding="10dp"-->
+            <!--android:textColor="#000"-->
+            <!--android:textColorHint="@color/c2"-->
+            <!--android:textIsSelectable="true"-->
+            <!--android:textStyle="bold" />-->
+
+
+        <!--<EditText-->
+            <!--android:id="@+id/carryingCapacityId"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_marginLeft="70dp"-->
+            <!--android:layout_marginRight="80dp"-->
+            <!--android:layout_marginBottom="15dp"-->
+            <!--android:background="@drawable/signupinputstyle"-->
+            <!--android:hint="Carrying Capacity(weight)"-->
+            <!--android:inputType="text"-->
+            <!--android:padding="10dp"-->
+            <!--android:textColor="#000"-->
+            <!--android:textColorHint="@color/c2"-->
+            <!--android:textIsSelectable="true"-->
+            <!--android:textStyle="bold" />-->
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/weightCapacityId"
+            android:text="Weight Capacity"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="80dp"
+            android:background="#ffffff"
+            />
+
 
         <ProgressBar
             android:id="@+id/progressbarSignUpId"
@@ -123,7 +156,7 @@
             android:layout_height="50dp"
             android:clickable="true"
             android:layout_marginLeft="100dp"
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="50dp"
             android:layout_marginBottom="40dp"
             android:background="#aa2c5811"
             android:text="Add Vehicle"
